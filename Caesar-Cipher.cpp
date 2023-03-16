@@ -1,18 +1,6 @@
 #include <iostream>
 #include <string>
 
-int main() {
-    std::string plaintext;
-    int shift;
-    std::cout << "Enter Plaintext: ";
-    std::getline(std::cin, plaintext);
-    std::cout << "Enter the shift value: ";
-    std::cin >> shift;
-    std::string ciphertext = encrypt(plaintext, shift);
-    std::cout << "Ciphertext: " << ciphertext << "\n";
-    return 0;
-}
-
 // Function to encrypt plaintext using Caesar Cipher
 std::string encrypt(std::string plaintext, int shift) {
     std::string ciphertext = "";
@@ -31,4 +19,17 @@ std::string encrypt(std::string plaintext, int shift) {
         }
     }
     return ciphertext;
+}
+
+int main() {
+    std::string plaintext;
+    int shift;
+    std::cout << "Enter Plaintext: ";
+    std::getline(std::cin, plaintext);
+    std::cout << "Enter the shift value: ";
+    std::cin >> shift;
+    std::string ciphertext = encrypt(plaintext, shift);
+    std::cout << "Ciphertext: " << ciphertext << "\n";
+    system("pause");
+    return 0;
 }
